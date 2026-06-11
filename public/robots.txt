@@ -1,0 +1,9 @@
+# http://www.robotstxt.org/robotstxt.html
+# FiTusion Premium Gym & Fitness Training Platform Robots Configuration
+
+User-agent: *
+Allow: /
+Disallow: /api/ # Prevent crawling API paths if any exist in the future
+
+# Sitemaps list
+Sitemap: https://www.fitusion.com/sitemap.xml
