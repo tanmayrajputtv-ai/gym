@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- Primary SEO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FiTusion | Premium Gym & Fitness Training Platform</title>
+  <meta name="description" content="FiTusion is India's #1 fitness platform offering expert personal training, HIIT, strength programs, and nutrition guidance. Join 12K+ members today.">
+  <meta name="keywords" content="gym website, fitness training, personal trainer, HIIT workout, strength training, fitness platform India">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.fitusion.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FiTusion | Premium Fitness Platform">
+  <meta property="og:description" content="Train smarter with expert coaches. 50+ programs, nutrition plans & community support.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.fitusion.com">
+  <meta property="og:image" content="https://www.fitusion.com/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FiTusion | Elevate Your Fitness">
+  <meta name="twitter:description" content="Join FiTusion — expert trainers, personalized programs, and a community that drives results.">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "FiTusion",
+    "description": "Premium online fitness and gym training platform",
+    "url": "https://www.fitusion.com",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.instagram.com/fitusion",
+      "https://www.facebook.com/fitusion"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              accent: '#D4AF37',      /* Metallic Gold */
+              accentHover: '#B59228', /* Deep Warm Gold */
+              bg: '#050505',          /* Deep Matte Black */
+              card: '#111111',        /* Charcoal Black Card */
+              border: '#2C2514',      /* Metallic gold-charcoal border */
+              textSec: '#B0B0B0',     /* Premium Soft Gray Text */
+            }
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Core Styles -->
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050505;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2C2514;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+
+    /* Selection Styling */
+    ::selection {
+      background-color: #D4AF37;
+      color: #000000;
+    }
+
+    /* Glow utilities matching custom premium glowing gold theme */
+    .lime-glow {
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.18), inset 0 0 8px rgba(212, 175, 55, 0.05);
+      border-color: rgba(212, 175, 55, 0.3) !important;
+    }
+    .lime-glow-hover {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .lime-glow-hover:hover {
+      box-shadow: 0 0 35px rgba(212, 175, 55, 0.35);
+      border-color: #D4AF37 !important;
+    }
+    .text-glow {
+      text-shadow: 0 0 15px rgba(212, 175, 55, 0.4), 0 0 5px rgba(212, 175, 55, 0.15);
+    }
+
+    /* Section Scroll Reveal Classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Mesh Background & Visual Grid Overlays with Gold accents */
+    .grid-overlay {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(212, 175, 55, 0.01) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(212, 175, 55, 0.01) 1px, transparent 1px);
+    }
+    .radial-mesh {
+      background: radial-gradient(circle 800px at 50% -100px, rgba(212, 175, 55, 0.12), transparent),
+                  radial-gradient(circle 600px at 50% 80%, rgba(212, 175, 55, 0.02), transparent);
+    }
+  </style>
+</head>
+<body class="bg-brand-bg text-white font-sans antialiased overflow-x-hidden selection:bg-brand-accent selection:text-black">
+
+  <!-- ================= 1. NAVBAR ================= -->
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#home" class="flex items-center space-x-2 group">
+        <span class="text-3xl font-display uppercase tracking-wider text-white">
+          <span class="text-brand-accent transition-colors duration-300 group-hover:text-white">Fi</span>Tusion
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#home" class="text-sm font-medium tracking-wide hover:text-brand-accent transition-colors duration-200">Home</a>
+        <a href="#programs" class="text-sm font-medium tracking-wide hover:text-brand-accent transition-colors duration-200">Programs</a>
+        <a href="#pricing" class="text-sm font-medium tracking-wide hover:text-brand-accent transition-colors duration-200">Memberships</a>
+        <a href="#trainers" class="text-sm font-medium tracking-wide hover:text-brand-accent transition-colors duration-200">Trainers</a>
+        <a href="#testimonials" class="text-sm font-medium tracking-wide hover:text-brand-accent transition-colors duration-200">Testimonials</a>
+        <a href="#contact" class="text-sm font-medium tracking-wide hover:text-brand-accent transition-colors duration-200">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden md:flex items-center">
+        <a href="#contact" class="bg-brand-accent text-black font-semibold text-sm px-6 py-2.5 rounded-[6px] hover:bg-white hover:text-black transition-all duration-300 font-sans tracking-wide">
+          Get Started
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white hover:text-brand-accent focus:outline-none transition-colors" aria-label="Toggle Menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="hamburger-icon" class="block" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+          <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu" class="hidden fixed top-20 left-0 w-full bg-brand-bg/95 backdrop-blur-xl border-b border-brand-border z-40 transition-all duration-300">
+      <div class="flex flex-col space-y-6 px-8 py-10">
+        <a href="#home" class="mobile-nav-link text-xl font-medium tracking-wide hover:text-brand-accent transition-colors duration-200">Home</a>
+        <a href="#programs" class="mobile-nav-link text-xl font-medium tracking-wide hover:text-brand-accent transition-colors duration-200">Programs</a>
+        <a href="#pricing" class="mobile-nav-link text-xl font-medium tracking-wide hover:text-brand-accent transition-colors duration-200">Memberships</a>
+        <a href="#trainers" class="mobile-nav-link text-xl font-medium tracking-wide hover:text-brand-accent transition-colors duration-200">Trainers</a>
+        <a href="#testimonials" class="mobile-nav-link text-xl font-medium tracking-wide hover:text-brand-accent transition-colors duration-200">Testimonials</a>
+        <a href="#contact" class="mobile-nav-link text-xl font-medium tracking-wide hover:text-brand-accent transition-colors duration-200">Contact</a>
+        <a href="#contact" class="mobile-nav-link bg-brand-accent text-black font-bold text-center py-3.5 rounded-[6px] hover:bg-white transition-colors duration-300 mt-4">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ================= 2. HERO SECTION ================= -->
+  <section id="home" class="min-h-screen relative flex items-center justify-center pt-24 pb-16 overflow-hidden radial-mesh">
+    <!-- Grid pattern background for athletic style -->
+    <div class="absolute inset-0 grid-overlay z-0"></div>
+
+    <!-- Majestic Raw Bodybuilder Backdrop (Full Height, Centered & Highly Immersive) -->
+    <div class="absolute inset-0 z-0 select-none pointer-events-none overflow-hidden flex items-center justify-center">
+      <img src="/src/assets/images/hero_bodybuilder_1781158057551.png" alt="FiTusion Premium Athlete" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center opacity-45 mix-blend-luminosity scale-100 transition-transform duration-1000">
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/40 to-brand-bg"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-bg via-transparent to-brand-bg"></div>
+    </div>
+    
+    <!-- Light glowing neon mesh behind text -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-accent/10 filter blur-[150px] rounded-full z-0 pointer-events-none"></div>
+
+    <!-- FLOATING FITNESS STAT CARDS (Left and Right Flanks) -->
+    <!-- Card 1: Heart Rate (Left Flank, Top) -->
+    <div class="absolute top-1/4 left-6 lg:left-12 xl:left-24 hidden md:flex items-center gap-3 bg-brand-card/95 backdrop-blur-md border border-brand-border p-4 rounded-xl lime-glow animate-bounce [animation-duration:5s] z-20">
+      <div class="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center border border-red-500/20">
+        <svg class="w-5 h-5 text-red-500 animate-pulse" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+      </div>
+      <div>
+        <p class="text-[10px] uppercase tracking-widest text-brand-textSec">Current Pulse</p>
+        <p class="font-display text-xl text-white font-bold leading-none mt-0.5">142 <span class="text-brand-accent text-xs font-sans">BPM</span></p>
+      </div>
+    </div>
+
+    <!-- Card 2: Premium Club Access (Left Flank, Bottom) -->
+    <div class="absolute bottom-1/4 left-8 lg:left-16 xl:left-32 hidden md:flex items-center gap-3 bg-brand-card/95 backdrop-blur-md border border-brand-border p-4 rounded-xl lime-glow animate-bounce [animation-duration:6.5s] z-20">
+      <div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center border border-brand-accent/20">
+        <svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+      </div>
+      <div>
+        <p class="text-[10px] uppercase tracking-widest text-brand-textSec">Floor Access</p>
+        <p class="font-display text-xl text-white font-bold leading-none mt-0.5">OPEN 24/7 <span class="text-brand-accent text-xs font-sans">YEAR ROUND</span></p>
+      </div>
+    </div>
+
+    <!-- Card 3: Calories Burned (Right Flank, Top) -->
+    <div class="absolute top-1/3 right-6 lg:right-12 xl:right-24 hidden md:flex items-center gap-3 bg-brand-card/95 backdrop-blur-md border border-brand-border p-4 rounded-xl lime-glow animate-bounce [animation-duration:4s] z-20">
+      <div class="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center border border-orange-500/20">
+        <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+        </svg>
+      </div>
+      <div>
+        <p class="text-[10px] uppercase tracking-widest text-brand-textSec">Active Burn</p>
+        <p class="font-display text-xl text-white font-bold leading-none mt-0.5">740 <span class="text-brand-accent text-xs font-sans">KCAL</span></p>
+      </div>
+    </div>
+
+    <!-- Card 4: Daily Workouts (Right Flank, Bottom) -->
+    <div class="absolute bottom-1/4 right-8 lg:right-16 xl:right-32 hidden md:flex items-center gap-3 bg-brand-card/95 backdrop-blur-md border border-brand-border p-4 rounded-xl lime-glow animate-bounce [animation-duration:5.5s] z-20">
+      <div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center border border-brand-accent/20">
+        <svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+      <div>
+        <p class="text-[10px] uppercase tracking-widest text-brand-textSec">Today's Duration</p>
+        <p class="font-display text-xl text-white font-bold leading-none mt-0.5">58 <span class="text-brand-accent text-xs font-sans">MINS</span></p>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 w-full text-center relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-10rem)]">
+      
+      <!-- 12K+ Badge -->
+      <div class="mb-6 flex items-center gap-2 bg-brand-card border border-brand-border px-4 py-2 rounded-full transform hover:scale-105 transition-all duration-300">
+        <span class="flex h-2.5 w-2.5 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-accent"></span>
+        </span>
+        <span class="text-xs uppercase tracking-widest font-semibold text-brand-accent">12K+ Active India Members</span>
+      </div>
+
+      <!-- Main Heading -->
+      <h1 class="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight leading-none uppercase max-w-5xl mx-auto drop-shadow-md">
+        Sculpt Your <span class="text-brand-accent text-glow">Body</span>,<br class="hidden sm:inline">
+        Elevate Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-200 to-brand-accent text-glow">Spirit</span>
+      </h1>
+
+      <!-- Subtext -->
+      <p class="mt-6 text-brand-textSec text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+        India's Premium Fitness Platform — Train Smarter, Live Stronger. Customized state-of-the-art workouts and premium coach-led nutrition strategy.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto">
+        <a href="#contact" class="w-full sm:w-auto text-center bg-brand-accent text-black font-bold uppercase tracking-wider text-sm px-8 py-4 rounded-[6px] hover:bg-white hover:shadow-[0_0_35px_rgba(255,215,0,0.5)] hover:scale-[1.02] transition-all duration-300">
+          Let's Start &rarr;
+        </a>
+        <a href="#programs" class="w-full sm:w-auto text-center bg-transparent text-white border border-white/20 hover:border-brand-accent font-bold uppercase tracking-wider text-sm px-8 py-4 rounded-[6px] hover:text-brand-accent transition-all duration-300">
+          Watch Demo
+        </a>
+      </div>
+
+      <!-- Stats Horizontal Row -->
+      <div class="mt-16 w-full max-w-4xl border-t border-brand-border pt-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-brand-border/40">
+          <div class="flex flex-col items-center justify-center p-2">
+            <span class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-accent">12K+</span>
+            <span class="text-xs uppercase tracking-widest text-brand-textSec mt-1">Total Members</span>
+          </div>
+          <div class="flex flex-col items-center justify-center p-2 pt-6 md:pt-2">
+            <span class="font-display text-3xl sm:text-4xl lg:text-5xl text-white">50+</span>
+            <span class="text-xs uppercase tracking-widest text-brand-textSec mt-1">Programs</span>
+          </div>
+          <div class="flex flex-col items-center justify-center p-2 pt-6 md:pt-2">
+            <span class="font-display text-3xl sm:text-4xl lg:text-5xl text-white">200+</span>
+            <span class="text-xs uppercase tracking-widest text-brand-textSec mt-1">Expert Trainers</span>
+          </div>
+          <div class="flex flex-col items-center justify-center p-2 pt-6 md:pt-2">
+            <span class="font-display text-3xl sm:text-4xl lg:text-5xl text-brand-accent">98%</span>
+            <span class="text-xs uppercase tracking-widest text-brand-textSec mt-1">Success Rate</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Partners Logo Row -->
+      <div class="mt-16 w-full max-w-4xl flex flex-col items-center">
+        <span class="text-[10px] uppercase tracking-widest text-brand-textSec/60 font-semibold mb-6">PROUD ASSOCIATES & PLATFORM PARTNERS</span>
+        <div class="flex flex-wrap items-center justify-center gap-8 md:gap-14 opacity-35 hover:opacity-60 transition-opacity duration-300">
+          <!-- Under Armour Placeholder -->
+          <span class="font-display text-xl tracking-tight text-white italic">UNDER ARMOUR</span>
+          <!-- Adidas Placeholder -->
+          <span class="font-display text-xl tracking-wide text-white">ADIDAS</span>
+          <!-- Puma Placeholder -->
+          <span class="font-display text-xl tracking-widest text-white italic">PUMA</span>
+          <!-- The North Face Placeholder -->
+          <span class="font-display text-xl tracking-tight text-white uppercase">THE NORTH FACE</span>
+          <!-- Nike Placeholder -->
+          <span class="font-display text-xl tracking-widest text-white uppercase italic">NIKE</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= 3. FEATURES / WHY US ================= -->
+  <section id="features" class="py-24 bg-brand-bg relative z-10 border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Headers -->
+      <div class="text-center md:text-left mb-16 reveal">
+        <div class="inline-block bg-brand-card border border-brand-border px-3.5 py-1.5 rounded-full mb-3">
+          <span class="text-[10px] uppercase tracking-widest font-bold text-brand-accent">FiTusion Advantage</span>
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight">
+          Inspired to Inspire <span class="text-brand-accent">Your Best Self</span>
+        </h2>
+        <p class="mt-4 text-brand-textSec text-base sm:text-lg max-w-2xl font-light">
+          We combine cutting-edge science, highly certified premium personal coaching, and a driven community to make spectacular transformations inevitable.
+        </p>
+      </div>
+
+      <!-- Feature Content & Big Display Block Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Feature Cards (6 cards in a 3x2 grid) in lg:col-span-7 -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          <!-- Card 1: Nutrition Guidance -->
+          <div class="bg-brand-card border border-brand-border p-8 rounded-[12px] lime-glow-hover transition-all duration-300 group flex flex-col justify-between reveal">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-brand-accent/10 flex items-center justify-center border border-brand-accent/20 mb-6 group-hover:bg-brand-accent/20 transition-all duration-300">
+                <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 class="font-display text-2xl uppercase tracking-wide text-white group-hover:text-brand-accent transition-colors duration-200">Nutrition Guidance</h3>
+              <p class="mt-3 text-brand-textSec text-sm leading-relaxed">
+                Personalized dietary blueprints, macro strategies, and supplement frameworks mapped to your biometrics.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Expert Trainers -->
+          <div class="bg-brand-card border border-brand-border p-8 rounded-[12px] lime-glow-hover transition-all duration-300 group flex flex-col justify-between reveal">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-brand-accent/10 flex items-center justify-center border border-brand-accent/20 mb-6 group-hover:bg-brand-accent/20 transition-all duration-300">
+                <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <h3 class="font-display text-2xl uppercase tracking-wide text-white group-hover:text-brand-accent transition-colors duration-200">Expert Trainers</h3>
+              <p class="mt-3 text-brand-textSec text-sm leading-relaxed">
+                Learn from industry-leading coaches holding top-tier certificates focused on performance safety.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Progress Tracking -->
+          <div class="bg-brand-card border border-brand-border p-8 rounded-[12px] lime-glow-hover transition-all duration-300 group flex flex-col justify-between reveal">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-brand-accent/10 flex items-center justify-center border border-brand-accent/20 mb-6 group-hover:bg-brand-accent/20 transition-all duration-300">
+                <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 class="font-display text-2xl uppercase tracking-wide text-white group-hover:text-brand-accent transition-colors duration-200">Progress Tracking</h3>
+              <p class="mt-3 text-brand-textSec text-sm leading-relaxed">
+                Analyze your key fitness metrics, 1RM milestones, and body composition changes via interactive systems.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4: Premium Membership -->
+          <div class="bg-brand-card border border-brand-border p-8 rounded-[12px] lime-glow-hover transition-all duration-300 group flex flex-col justify-between reveal">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-brand-accent/10 flex items-center justify-center border border-brand-accent/20 mb-6 group-hover:bg-brand-accent/20 transition-all duration-300">
+                <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <h3 class="font-display text-2xl uppercase tracking-wide text-white group-hover:text-brand-accent transition-colors duration-200">Premium Membership</h3>
+              <p class="mt-3 text-brand-textSec text-sm leading-relaxed">
+                Gain prioritised entry to state-of-the-art gym infrastructure, VIP lockers, and wellness-recovery suites.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5: Community Support -->
+          <div class="bg-brand-card border border-brand-border p-8 rounded-[12px] lime-glow-hover transition-all duration-300 group flex flex-col justify-between reveal">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-brand-accent/10 flex items-center justify-center border border-brand-accent/20 mb-6 group-hover:bg-brand-accent/20 transition-all duration-300">
+                <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 class="font-display text-2xl uppercase tracking-wide text-white group-hover:text-brand-accent transition-colors duration-200">Community Support</h3>
+              <p class="mt-3 text-brand-textSec text-sm leading-relaxed">
+                Connect and thrive inside an energetic circle of fitness innovators pushing boundaries step-by-step.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6: Next-Level Fitness Plans -->
+          <div class="bg-brand-card border border-brand-border p-8 rounded-[12px] lime-glow-hover transition-all duration-300 group flex flex-col justify-between reveal">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-brand-accent/10 flex items-center justify-center border border-brand-accent/20 mb-6 group-hover:bg-brand-accent/20 transition-all duration-300">
+                <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 class="font-display text-2xl uppercase tracking-wide text-white group-hover:text-brand-accent transition-colors duration-200">Next-Level Fitness Plans</h3>
+              <p class="mt-3 text-brand-textSec text-sm leading-relaxed">
+                Progressive overload paradigms built step-by-step to smash plateau bottlenecks forever.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Side Graphic / Mockup Presentation in lg:col-span-5 -->
+        <div class="lg:col-span-5 flex flex-col justify-between bg-brand-card border border-brand-border p-8 rounded-[12px] relative overflow-hidden group min-h-[500px] reveal">
+          <!-- Background image with elite contrast dark theme -->
+          <div class="absolute inset-0 z-0 opacity-15 group-hover:opacity-25 transition-opacity duration-500">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800" alt="Club Design Architecture" referrerpolicy="no-referrer" class="w-full h-full object-cover filter grayscale contrast-125">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-brand-card/90 to-transparent"></div>
+          </div>
+          
+          <div class="relative z-10 w-full">
+            <div class="inline-block bg-[#1a1a1a] border border-brand-border/60 px-3 py-1 rounded-full mb-4">
+              <span class="text-[9px] uppercase tracking-widest font-bold text-brand-accent">SENSORY EXCELLENCE</span>
+            </div>
+            <h3 class="font-display text-4xl text-white uppercase mb-6 tracking-tight">The Sanctuary of Focus</h3>
+            
+            <p class="text-brand-textSec text-sm font-light leading-relaxed mb-8">
+              We engineer physical spaces specifically designed to optimize mental compression and physical output. No massive screens, no digital telemetry clutter, and no gimmicks — just raw equipment precision and elite training dedication.
+            </p>
+
+            <!-- Premium Club Core Value List with clean typography -->
+            <ul class="space-y-4 font-sans text-xs text-white">
+              <li class="flex items-center gap-3">
+                <span class="w-2 h-2 bg-brand-accent rounded-full flex-shrink-0 animate-pulse"></span>
+                <span>ELEIKO® COMPETITION BARS & CALIBRATED STEEL PLATES</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-2 h-2 bg-brand-accent rounded-full flex-shrink-0 animate-pulse"></span>
+                <span>HAND-WELDED POWER RIGS & DUAL MONOLIFT PLATFORMS</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-2 h-2 bg-brand-accent rounded-full flex-shrink-0 animate-pulse"></span>
+                <span>VO2-OPTIMIZED CONTINUOUS COLD AIR CIRCULATION FOR COGNITIVE FLOW</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-2 h-2 bg-brand-accent rounded-full flex-shrink-0 animate-pulse"></span>
+                <span>SPORTS MEDICINE CLINICAL RECOVERY & STEAM SUITES</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="relative z-10 mt-10 pt-6 border-t border-brand-border/60 flex items-center justify-between">
+            <span class="font-mono text-[9px] text-[#555] uppercase tracking-widest">// BENGALURU · MUMBAI · NEW DELHI</span>
+            <a href="#contact" class="text-brand-accent hover:text-white transition-colors text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
+              SECURE SLOT <span class="group-hover:translate-x-1.5 transition-transform">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= 4. WHAT SETS US APART ================= -->
+  <section id="why-us" class="py-24 bg-brand-card border-y border-brand-border relative z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Title -->
+      <div class="text-center mb-16 reveal">
+        <div class="inline-block bg-brand-bg border border-brand-border px-3.5 py-1.5 rounded-full mb-3">
+          <span class="text-[10px] uppercase tracking-widest font-bold text-brand-accent">Excellence Manifested</span>
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight">
+          Discover What <span class="text-brand-accent">Sets Us Apart</span>
+        </h2>
+        <p class="mt-4 text-brand-textSec text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          Unlock personalized systems aligned mathematically to your muscular genetics, biometric capabilities, and metabolic structure.
+        </p>
+      </div>
+
+      <!-- Tab based cards or horizontal structure in dynamic desktop/mobile layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+        
+        <!-- CARD 1: Cardio Training -->
+        <div class="bg-brand-bg border border-brand-border p-8 rounded-[12px] border-l-4 border-l-brand-accent group hover:border-brand-accent transition-all duration-300 flex flex-col justify-between h-full">
+          <div>
+            <span class="font-mono text-xs text-brand-accent font-semibold tracking-wider">01 // TARGET RECOVERY</span>
+            <h3 class="font-display text-3xl text-white uppercase mt-3 mb-4 group-hover:text-brand-accent transition-colors">Cardio Training</h3>
+            <p class="text-brand-textSec text-sm leading-relaxed mb-6 font-light">
+              Maximum aerobic capability enhancements with real-time heart rate variation tracking during high output sprints.
+            </p>
+          </div>
+          <a href="#contact" class="text-brand-accent text-sm font-semibold tracking-wider inline-flex items-center group-hover:translate-x-2 transition-transform duration-300">
+            Explore &rarr;
+          </a>
+        </div>
+
+        <!-- CARD 2: Strength Build -->
+        <div class="bg-brand-bg border border-brand-border p-8 rounded-[12px] border-l-4 border-l-brand-accent group hover:border-brand-accent transition-all duration-300 flex flex-col justify-between h-full">
+          <div>
+            <span class="font-mono text-xs text-brand-accent font-semibold tracking-wider">02 // HYPERTROPHY ZONE</span>
+            <h3 class="font-display text-3xl text-white uppercase mt-3 mb-4 group-hover:text-brand-accent transition-colors">Strength Build</h3>
+            <p class="text-brand-textSec text-sm leading-relaxed mb-6 font-light">
+              Scientific progressive overload framework aiming to optimize central nervous system output and muscle fiber cross-section.
+            </p>
+          </div>
+          <a href="#contact" class="text-brand-accent text-sm font-semibold tracking-wider inline-flex items-center group-hover:translate-x-2 transition-transform duration-300">
+            Explore &rarr;
+          </a>
+        </div>
+
+        <!-- CARD 3: Fat Loss -->
+        <div class="bg-brand-bg border border-brand-border p-8 rounded-[12px] border-l-4 border-l-brand-accent group hover:border-brand-accent transition-all duration-300 flex flex-col justify-between h-full">
+          <div>
+            <span class="font-mono text-xs text-brand-accent font-semibold tracking-wider">03 // METABOLIC SHIFT</span>
+            <h3 class="font-display text-3xl text-white uppercase mt-3 mb-4 group-hover:text-brand-accent transition-colors">Fat Loss</h3>
+            <p class="text-brand-textSec text-sm leading-relaxed mb-6 font-light">
+              Strategic body composition re-engineering paired with optimized metabolic diets helping preserve raw power.
+            </p>
+          </div>
+          <a href="#contact" class="text-brand-accent text-sm font-semibold tracking-wider inline-flex items-center group-hover:translate-x-2 transition-transform duration-300">
+            Explore &rarr;
+          </a>
+        </div>
+
+        <!-- CARD 4: HIIT Workouts -->
+        <div class="bg-brand-bg border border-brand-border p-8 rounded-[12px] border-l-4 border-l-brand-accent group hover:border-brand-accent transition-all duration-300 flex flex-col justify-between h-full">
+          <div>
+            <span class="font-mono text-xs text-brand-accent font-semibold tracking-wider">04 // AFTERBURN EFFECT</span>
+            <h3 class="font-display text-3xl text-white uppercase mt-3 mb-4 group-hover:text-brand-accent transition-colors">HIIT Workouts</h3>
+            <p class="text-brand-textSec text-sm leading-relaxed mb-6 font-light">
+              Maximum power workouts engineered to unlock premium metabolic rates for up to 36 hours post finishing.
+            </p>
+          </div>
+          <a href="#contact" class="text-brand-accent text-sm font-semibold tracking-wider inline-flex items-center group-hover:translate-x-2 transition-transform duration-300">
+            Explore &rarr;
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= 5. PROGRAMS / TRAIN SMARTER ================= -->
+  <section id="programs" class="py-24 bg-brand-bg relative z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Title -->
+      <div class="text-center mb-16 reveal">
+        <div class="inline-block bg-brand-card border border-brand-border px-3.5 py-1.5 rounded-full mb-3">
+          <span class="text-[10px] uppercase tracking-widest font-bold text-brand-accent">Precision Ecosystem</span>
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight">
+          Train Smarter, <span class="text-brand-accent">Unleash Your Potential</span>
+        </h2>
+        <p class="mt-4 text-brand-textSec text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          Our specialized high-performance programs are engineered scientifically to challenge you and produce elite physiological adaptations.
+        </p>
+      </div>
+
+      <!-- Program Cards: 3x2 Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Program 1: Barbell Basics -->
+        <div class="bg-brand-card border border-brand-border rounded-[12px] overflow-hidden hover:scale-[1.02] hover:border-brand-accent hover:shadow-[0_0_35px_rgba(255,215,0,0.22)] transition-all duration-300 group flex flex-col justify-between h-full reveal">
+          <!-- Premium Black-and-White Fitness Photography -->
+          <div class="h-56 w-full relative overflow-hidden border-b border-brand-border">
+            <span class="absolute top-4 left-4 bg-brand-accent text-black text-[10px] font-bold px-2.5 py-1 rounded-[4px] uppercase tracking-wider z-10">Level: Beginner</span>
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=800" alt="Barbell Compound Training" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-75 group-hover:grayscale-0 group-hover:brightness-90 group-hover:scale-105 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-black/40 z-5"></div>
+          </div>
+          <div class="p-8 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-display text-3xl text-white uppercase group-hover:text-brand-accent transition-colors">Barbell Basics</h3>
+              <p class="mt-3 text-brand-textSec text-sm font-light leading-relaxed">
+                Unlock the proper bio-mechanical structure for foundational lifts like compound deadlifts, barbell back squats, and flat benchpress.
+              </p>
+            </div>
+            <div class="mt-6 pt-6 border-t border-brand-border/60 flex items-center justify-between">
+              <span class="text-xs font-mono text-brand-textSec">12 Sessions // Multi-Tiered</span>
+              <a href="#contact" class="text-brand-accent text-xs font-bold uppercase tracking-wider hover:underline">Register Now &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 2: Kettlebell Masterclass -->
+        <div class="bg-brand-card border border-brand-border rounded-[12px] overflow-hidden hover:scale-[1.02] hover:border-brand-accent hover:shadow-[0_0_35px_rgba(255,215,0,0.22)] transition-all duration-300 group flex flex-col justify-between h-full reveal">
+          <!-- Premium Black-and-White Fitness Photography -->
+          <div class="h-56 w-full relative overflow-hidden border-b border-brand-border">
+            <span class="absolute top-4 left-4 bg-brand-accent text-black text-[10px] font-bold px-2.5 py-1 rounded-[4px] uppercase tracking-wider z-10">Level: Intermediate</span>
+            <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&q=80&w=800" alt="Kettlebell Studio Training" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-75 group-hover:grayscale-0 group-hover:brightness-90 group-hover:scale-105 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-black/40 z-5"></div>
+          </div>
+          <div class="p-8 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-display text-3xl text-white uppercase group-hover:text-brand-accent transition-colors">Kettlebell Masterclass</h3>
+              <p class="mt-3 text-brand-textSec text-sm font-light leading-relaxed">
+                Master ballistics and swings designed specifically to target core musculature, improve physical stability, and ignite active fat loss.
+              </p>
+            </div>
+            <div class="mt-6 pt-6 border-t border-brand-border/60 flex items-center justify-between">
+              <span class="text-xs font-mono text-brand-textSec">16 Sessions // Ballistic</span>
+              <a href="#contact" class="text-brand-accent text-xs font-bold uppercase tracking-wider hover:underline">Register Now &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 3: Cardio Power Boost -->
+        <div class="bg-brand-card border border-brand-border rounded-[12px] overflow-hidden hover:scale-[1.02] hover:border-brand-accent hover:shadow-[0_0_35px_rgba(255,215,0,0.22)] transition-all duration-300 group flex flex-col justify-between h-full reveal">
+          <!-- Premium Black-and-White Fitness Photography -->
+          <div class="h-56 w-full relative overflow-hidden border-b border-brand-border">
+            <span class="absolute top-4 left-4 bg-brand-accent text-black text-[10px] font-bold px-2.5 py-1 rounded-[4px] uppercase tracking-wider z-10">Level: All Levels</span>
+            <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&q=80&w=800" alt="HIIT Athletic Sprinting" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-75 group-hover:grayscale-0 group-hover:brightness-90 group-hover:scale-105 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-black/40 z-5"></div>
+          </div>
+          <div class="p-8 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-display text-3xl text-white uppercase group-hover:text-brand-accent transition-colors">Cardio Power Boost</h3>
+              <p class="mt-3 text-brand-textSec text-sm font-light leading-relaxed">
+                Elevate your heart rate recovery metrics and respiratory power thresholds utilizing optimized HIIT structures.
+              </p>
+            </div>
+            <div class="mt-6 pt-6 border-t border-brand-border/60 flex items-center justify-between">
+              <span class="text-xs font-mono text-brand-textSec">10 Sessions // High Intensity</span>
+              <a href="#contact" class="text-brand-accent text-xs font-bold uppercase tracking-wider hover:underline">Register Now &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 4: Hypertrophy -->
+        <div class="bg-brand-card border border-brand-border rounded-[12px] overflow-hidden hover:scale-[1.02] hover:border-brand-accent hover:shadow-[0_0_35px_rgba(255,215,0,0.22)] transition-all duration-300 group flex flex-col justify-between h-full reveal">
+          <!-- Premium Black-and-White Fitness Photography -->
+          <div class="h-56 w-full relative overflow-hidden border-b border-brand-border">
+            <span class="absolute top-4 left-4 bg-brand-accent text-black text-[10px] font-bold px-2.5 py-1 rounded-[4px] uppercase tracking-wider z-10">Level: Advanced</span>
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800" alt="Bodybuilder Muscular Hypertrophy" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-75 group-hover:grayscale-0 group-hover:brightness-90 group-hover:scale-105 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-black/40 z-5"></div>
+          </div>
+          <div class="p-8 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-display text-3xl text-white uppercase group-hover:text-brand-accent transition-colors">Hypertrophy</h3>
+              <p class="mt-3 text-[#88888b] text-sm font-light leading-relaxed">
+                Targeting intense physical muscular hypertrophy utilizing modern workout splits and premium eccentric contraction speed control.
+              </p>
+            </div>
+            <div class="mt-6 pt-6 border-t border-brand-border/60 flex items-center justify-between">
+              <span class="text-xs font-mono text-brand-textSec">24 Sessions // Strength Zones</span>
+              <a href="#contact" class="text-brand-accent text-xs font-bold uppercase tracking-wider hover:underline">Register Now &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 5: Rope Climbing -->
+        <div class="bg-brand-card border border-brand-border rounded-[12px] overflow-hidden hover:scale-[1.02] hover:border-brand-accent hover:shadow-[0_0_35px_rgba(255,215,0,0.22)] transition-all duration-300 group flex flex-col justify-between h-full reveal">
+          <!-- Premium Black-and-White Fitness Photography -->
+          <div class="h-56 w-full relative overflow-hidden border-b border-brand-border">
+            <span class="absolute top-4 left-4 bg-brand-accent text-black text-[10px] font-bold px-2.5 py-1 rounded-[4px] uppercase tracking-wider z-10">Level: Elite</span>
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800" alt="Battling Battle Ropes" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-75 group-hover:grayscale-0 group-hover:brightness-90 group-hover:scale-105 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-black/40 z-5"></div>
+          </div>
+          <div class="p-8 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-display text-3xl text-white uppercase group-hover:text-brand-accent transition-colors">Rope Climbing</h3>
+              <p class="mt-3 text-brand-textSec text-sm font-light leading-relaxed">
+                Optimize your functional raw power strength, grip metrics, and agility capabilities via advanced rope paradigms.
+              </p>
+            </div>
+            <div class="mt-6 pt-6 border-t border-brand-border/60 flex items-center justify-between">
+              <span class="text-xs font-mono text-brand-textSec">8 Sessions // Functional Power</span>
+              <a href="#contact" class="text-brand-accent text-xs font-bold uppercase tracking-wider hover:underline">Register Now &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 6: TRX Suspension -->
+        <div class="bg-brand-card border border-brand-border rounded-[12px] overflow-hidden hover:scale-[1.02] hover:border-brand-accent hover:shadow-[0_0_35px_rgba(255,215,0,0.22)] transition-all duration-300 group flex flex-col justify-between h-full reveal">
+          <!-- Premium Black-and-White Fitness Photography -->
+          <div class="h-56 w-full relative overflow-hidden border-b border-brand-border">
+            <span class="absolute top-4 left-4 bg-brand-accent text-black text-[10px] font-bold px-2.5 py-1 rounded-[4px] uppercase tracking-wider z-10">Level: Intermediate</span>
+            <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=800" alt="TRX Suspension Plank Training" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-75 group-hover:grayscale-0 group-hover:brightness-90 group-hover:scale-105 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-black/40 z-5"></div>
+          </div>
+          <div class="p-8 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-display text-3xl text-white uppercase group-hover:text-brand-accent transition-colors">TRX Suspension</h3>
+              <p class="mt-3 text-brand-textSec text-sm font-light leading-relaxed">
+                Develop intense full-body coordination and elite bodyweight stability leveraging gravity suspension straps.
+              </p>
+            </div>
+            <div class="mt-6 pt-6 border-t border-brand-border/60 flex items-center justify-between">
+              <span class="text-xs font-mono text-brand-textSec">14 Sessions // Core Balance</span>
+              <a href="#contact" class="text-brand-accent text-xs font-bold uppercase tracking-wider hover:underline">Register Now &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= 6. EXPERIENCE FITNESS ================= -->
+  <section id="experience" class="py-24 bg-brand-card border-y border-brand-border relative z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Title -->
+      <div class="text-center mb-16 reveal">
+        <div class="inline-block bg-brand-bg border border-brand-border px-3.5 py-1.5 rounded-full mb-3">
+          <span class="text-[10px] uppercase tracking-widest font-bold text-brand-accent">Shatter Plateaus</span>
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight">
+          Experience Fitness <span class="text-brand-accent">Like Never Before</span>
+        </h2>
+        <p class="mt-4 text-brand-textSec text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          Step into a state-of-the-art sensory ecosystem built entirely on dark-architectural layouts designed to maximize your visual focus.
+        </p>
+      </div>
+
+      <!-- Feature Highlight Wide Layout (Two Column Block) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 reveal">
+        
+        <!-- CARD 1: Endurance Evolution -->
+        <div class="bg-brand-card border border-brand-border p-8 sm:p-12 rounded-[12px] relative overflow-hidden group hover:border-brand-accent/40 transition-all duration-300 flex flex-col justify-between min-h-[420px]">
+          <!-- Deep Premium B&W Athletic Backdrop -->
+          <div class="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-750 select-none pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&q=80&w=800" alt="Endurance Evolution Active Sport" referrerpolicy="no-referrer" class="w-full h-full object-cover filter grayscale contrast-125 brightness-50">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-brand-card/75 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-card/80 via-transparent to-brand-card/80"></div>
+          </div>
+
+          <div class="relative z-10">
+            <!-- Pill tag -->
+            <span class="bg-brand-accent text-black font-semibold uppercase text-[9px] tracking-widest px-3 py-1 rounded-full inline-block mb-6">AEROBIC ADVANCEMENT</span>
+            <h3 class="font-display text-4xl sm:text-5xl text-white uppercase mb-4 tracking-tight group-hover:text-brand-accent transition-colors">Endurance Evolution</h3>
+            <p class="text-brand-textSec text-base font-light leading-relaxed mb-8">
+              Unlock supreme cellular mitochondrial density through long threshold aerobic output regimes. We program heart rate patterns targeting optimal recovery kinetics, pacing, and sustainable endurance metrics.
+            </p>
+          </div>
+          <div class="relative z-10 flex items-center justify-between pt-6 border-t border-brand-border/60">
+            <span class="font-mono text-xs text-brand-textSec">// ADVANCED PERFORMANCE METRICS</span>
+            <a href="#contact" class="text-brand-accent hover:text-white transition-colors text-sm font-bold uppercase tracking-wider inline-flex items-center group-hover:translate-x-1.5 transition-transform">
+              Explore &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2: Speed Surge -->
+        <div class="bg-brand-card border border-brand-border p-8 sm:p-12 rounded-[12px] relative overflow-hidden group hover:border-brand-accent/40 transition-all duration-300 flex flex-col justify-between min-h-[420px]">
+          <!-- Deep Premium B&W Athletic Backdrop -->
+          <div class="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-750 select-none pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?auto=format&fit=crop&q=80&w=800" alt="Speed Surge Active Sport" referrerpolicy="no-referrer" class="w-full h-full object-cover filter grayscale contrast-125 brightness-50">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-brand-card/75 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-card/80 via-transparent to-brand-card/80"></div>
+          </div>
+
+          <div class="relative z-10">
+            <!-- Pill tag -->
+            <span class="bg-brand-accent text-black font-semibold uppercase text-[9px] tracking-widest px-3 py-1 rounded-full inline-block mb-6">ANAEROBIC VELOCITY</span>
+            <h3 class="font-display text-4xl sm:text-5xl text-white uppercase mb-4 tracking-tight group-hover:text-brand-accent transition-colors">Speed Surge</h3>
+            <p class="text-brand-textSec text-base font-light leading-relaxed mb-8">
+              Amplify nervous system speed output and dynamic reactivity parameters. Leveraging explosive plyometric exercises, resistance band power sprints, and fast load-shifting mechanics.
+            </p>
+          </div>
+          <div class="relative z-10 flex items-center justify-between pt-6 border-t border-brand-border/60">
+            <span class="font-mono text-xs text-brand-textSec">// EXPLOSIVE ATP-CP PARADIGMS</span>
+            <a href="#contact" class="text-brand-accent hover:text-white transition-colors text-sm font-bold uppercase tracking-wider inline-flex items-center group-hover:translate-x-1.5 transition-transform">
+              Explore &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= 6.5 PRICING & MEMBERSHIP PLANS ================= -->
+  <section id="pricing" class="py-24 bg-brand-bg relative z-10 border-t border-brand-border/40">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-16 reveal">
+        <div class="inline-block bg-brand-card border border-brand-border px-3.5 py-1.5 rounded-full mb-3">
+          <span class="text-[10px] uppercase tracking-widest font-bold text-brand-accent">Flexible Subscriptions</span>
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight">
+          MONTHLY <span class="text-brand-accent">MEMBERSHIP PLANS</span>
+        </h2>
+        <p class="mt-4 text-brand-textSec text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          Premium all-tier floor facilities and expert training support plans. No hidden enrollment charges or contract bottlenecks.
+        </p>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- PLAN 1: Club Pass -->
+        <div class="bg-brand-card border border-brand-border rounded-[12px] p-8 flex flex-col justify-between hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.03)] transition-all duration-300 reveal">
+          <div>
+            <div class="flex justify-between items-start mb-6">
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-widest text-brand-textSec">// Tier 01</span>
+                <h3 class="font-display text-3xl text-white uppercase mt-1">Club Pass</h3>
+              </div>
+              <span class="text-[10px] uppercase font-bold tracking-wider font-mono text-brand-textSec bg-neutral-900 border border-brand-border px-2.5 py-1 rounded">Floor Access</span>
+            </div>
+            
+            <!-- Price -->
+            <div class="mb-8">
+              <span class="text-4xl font-display text-white">₹2,499</span>
+              <span class="text-xs text-brand-textSec font-mono">/ month</span>
+            </div>
+
+            <!-- Features -->
+            <ul class="space-y-4 mb-8 text-sm text-brand-textSec">
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span>Unlimited premium gym floor access</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span>Elite Olympic-rigs & free-weight stacks</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span>VIP biometric lock lockers & luxury shower suites</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span>Initial body composition & posture evaluation</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-neutral-600 line-through">
+                <span>✕ Dedicated 1-on-1 Certified Personal Coach</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-neutral-600 line-through">
+                <span>✕ Specialized daily diet nutrition macros plan</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="selectMembershipPlan(0, 'Club Pass')" class="w-full bg-transparent border border-brand-border hover:border-brand-accent text-white hover:text-black hover:bg-brand-accent font-bold uppercase tracking-wider text-xs py-3.5 rounded-[6px] transition-all duration-300">
+            Select Club Pass &rarr;
+          </button>
+        </div>
+
+        <!-- PLAN 2: Coach Pro (Popular) -->
+        <div class="bg-brand-card border-2 border-brand-accent rounded-[12px] p-8 flex flex-col justify-between hover:shadow-[0_0_45px_rgba(255,215,0,0.35)] transition-all duration-300 relative reveal z-10">
+          <!-- Recommended Badge -->
+          <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-accent text-black text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border-2 border-brand-bg">Most Popular</span>
+          
+          <div>
+            <div class="flex justify-between items-start mb-6 mt-2">
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-widest text-brand-accent">// Tier 02</span>
+                <h3 class="font-display text-4xl text-white uppercase mt-1">Coach Pro</h3>
+              </div>
+              <span class="text-[10px] uppercase font-bold tracking-wider font-mono text-black bg-brand-accent px-2.5 py-1 rounded">Full Coaching</span>
+            </div>
+            
+            <!-- Price -->
+            <div class="mb-8">
+              <span class="text-5xl font-display text-white">₹4,499</span>
+              <span class="text-xs text-brand-accent font-mono">/ month</span>
+            </div>
+
+            <!-- Features -->
+            <ul class="space-y-4 mb-8 text-sm text-brand-textSec">
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span class="text-white">Everything in Club Pass included</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span>1-on-1 Dedicated certified fitness coach</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span>Daily customized diet nutrition macros plan</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span>Weekly body composition audit & HRV speed trackers</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span>Direct daily coach check-ins on WhatsApp</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-neutral-600 line-through">
+                <span>✕ Daily chef prep meals delivered to doorstep</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="selectMembershipPlan(1, 'Coach Pro')" class="w-full bg-brand-accent text-black hover:bg-white font-bold uppercase tracking-wider text-xs py-3.5 rounded-[6px] shadow-[0_0_25px_rgba(255,215,0,0.45)] hover:shadow-[0_0_5px_rgba(255,215,0,0.1)] transition-all duration-300">
+            Select Coach Pro &rarr;
+          </button>
+        </div>
+
+        <!-- PLAN 3: Elite Athlete -->
+        <div class="bg-brand-card border border-brand-border rounded-[12px] p-8 flex flex-col justify-between hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.03)] transition-all duration-300 reveal">
+          <div>
+            <div class="flex justify-between items-start mb-6">
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-widest text-brand-textSec">// Tier 03</span>
+                <h3 class="font-display text-3xl text-white uppercase mt-1">Elite Athlete</h3>
+              </div>
+              <span class="text-[10px] uppercase font-bold tracking-wider font-mono text-brand-accent bg-neutral-900 border border-brand-border px-2.5 py-1 rounded">VIP Concierge</span>
+            </div>
+            
+            <!-- Price -->
+            <div class="mb-8">
+              <span class="text-4xl font-display text-white">₹7,999</span>
+              <span class="text-xs text-brand-textSec font-mono">/ month</span>
+            </div>
+
+            <!-- Features -->
+            <ul class="space-y-4 mb-8 text-sm text-brand-textSec">
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span class="text-white">Everything in Coach Pro included</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span>Unlimited face-to-face coaching sessions</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span>Pre-allocated private VIP lockers & steam recovery</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span>Priority entry & reservation at all India branches</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span>Daily bespoke athletic nutritionist-made meal delivery</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-accent mt-0.5">✓</span>
+                <span>Bi-weekly physiological blood metrics & HRV audit</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="selectMembershipPlan(2, 'Elite Athlete')" class="w-full bg-transparent border border-brand-border hover:border-brand-accent text-white hover:text-black hover:bg-brand-accent font-bold uppercase tracking-wider text-xs py-3.5 rounded-[6px] transition-all duration-300">
+            Select Elite Athlete &rarr;
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= 7. TRAINERS ================= -->
+  <section id="trainers" class="py-24 bg-brand-bg relative z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Title -->
+      <div class="text-center mb-16 reveal">
+        <div class="inline-block bg-brand-card border border-brand-border px-3.5 py-1.5 rounded-full mb-3">
+          <span class="text-[10px] uppercase tracking-widest font-bold text-brand-accent">Elite Leadership</span>
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight">
+          Your Fitness Goals, <span class="text-brand-accent">Their Expertise</span>
+        </h2>
+        <p class="mt-4 text-brand-textSec text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          Train side-by-side with India's most certified, elite fitness tacticians who hold specialized sports performance qualifications.
+        </p>
+      </div>
+
+      <!-- 3 Trainer Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Trainer 1: Blake Hunter -->
+        <div class="bg-brand-card border border-brand-border rounded-[12px] overflow-hidden group hover:border-brand-accent transition-all duration-300 flex flex-col justify-between h-full reveal">
+          <!-- Professional Black-and-White Trainer Portrait -->
+          <div class="h-96 w-full relative overflow-hidden border-b border-brand-border">
+            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&q=80&w=800" alt="Blake Hunter Portrait" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-75 group-hover:grayscale-0 group-hover:brightness-95 group-hover:scale-105 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-black/10 to-transparent"></div>
+            <!-- Star rating -->
+            <div class="absolute top-4 left-4 bg-black/85 backdrop-blur-md border border-brand-border px-3 py-1 rounded flex items-center space-x-1 z-10">
+              <span class="text-brand-accent text-xs">★</span>
+              <span class="text-white text-xs font-semibold">5.0 Rating</span>
+            </div>
+            <!-- Trainer tag -->
+            <span class="absolute bottom-4 left-4 bg-brand-accent text-black text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-wider z-10">Strength Expert</span>
+          </div>
+          <div class="p-8">
+            <h3 class="font-display text-3xl text-white uppercase">Blake Hunter</h3>
+            <p class="text-xs font-mono text-brand-accent mt-1 lowercase">strength.coach@fitusion.com</p>
+            <p class="mt-4 text-brand-textSec text-sm font-light leading-relaxed">
+              10+ years coaching Olympic lifting and power elites. Architect of deep athletic rehabilitation strategies.
+            </p>
+            <div class="mt-6 flex gap-2">
+              <span class="text-[10px] uppercase font-mono bg-brand-bg px-2.5 py-1 border border-brand-border text-brand-textSec rounded">CSCS</span>
+              <span class="text-[10px] uppercase font-mono bg-brand-bg px-2.5 py-1 border border-brand-border text-brand-textSec rounded">USAW-L1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 2: Liam Crossfit -->
+        <div class="bg-brand-card border border-brand-border rounded-[12px] overflow-hidden group hover:border-brand-accent transition-all duration-300 flex flex-col justify-between h-full reveal">
+          <!-- Professional Black-and-White Trainer Portrait -->
+          <div class="h-96 w-full relative overflow-hidden border-b border-brand-border">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800" alt="Liam CrossFit Portrait" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-75 group-hover:grayscale-0 group-hover:brightness-95 group-hover:scale-105 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-black/10 to-transparent"></div>
+            <!-- Star rating -->
+            <div class="absolute top-4 left-4 bg-black/85 backdrop-blur-md border border-brand-border px-3 py-1 rounded flex items-center space-x-1 z-10">
+              <span class="text-brand-accent text-xs">★</span>
+              <span class="text-white text-xs font-semibold">4.9 Rating</span>
+            </div>
+            <!-- Trainer tag -->
+            <span class="absolute bottom-4 left-4 bg-brand-accent text-black text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-wider z-10">CrossFit Specialist</span>
+          </div>
+          <div class="p-8">
+            <h3 class="font-display text-3xl text-white uppercase">Liam Crossfit</h3>
+            <p class="text-xs font-mono text-brand-accent mt-1 lowercase">liam.cf@fitusion.com</p>
+            <p class="mt-4 text-brand-textSec text-sm font-light leading-relaxed">
+              Certified CrossFit Level-3 instructor. Expert in dynamic gymnast skills, high volume engines, and hybrid metabolic capacity.
+            </p>
+            <div class="mt-6 flex gap-2">
+              <span class="text-[10px] uppercase font-mono bg-brand-bg px-2.5 py-1 border border-brand-border text-brand-textSec rounded">CF-L3</span>
+              <span class="text-[10px] uppercase font-mono bg-brand-bg px-2.5 py-1 border border-brand-border text-brand-textSec rounded">KRA-1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 3: Logan Torque -->
+        <div class="bg-brand-card border border-brand-border rounded-[12px] overflow-hidden group hover:border-brand-accent transition-all duration-300 flex flex-col justify-between h-full reveal">
+          <!-- Professional Black-and-White Trainer Portrait -->
+          <div class="h-96 w-full relative overflow-hidden border-b border-brand-border">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800" alt="Logan Torque Portrait" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-75 group-hover:grayscale-0 group-hover:brightness-95 group-hover:scale-105 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-black/10 to-transparent"></div>
+            <!-- Star rating -->
+            <div class="absolute top-4 left-4 bg-black/85 backdrop-blur-md border border-brand-border px-3 py-1 rounded flex items-center space-x-1 z-10">
+              <span class="text-brand-accent text-xs">★</span>
+              <span class="text-white text-xs font-semibold">5.0 Rating</span>
+            </div>
+            <!-- Trainer tag -->
+            <span class="absolute bottom-4 left-4 bg-brand-accent text-black text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-wider z-10">HIIT Expert</span>
+          </div>
+          <div class="p-8">
+            <h3 class="font-display text-3xl text-white uppercase">Logan Torque</h3>
+            <p class="text-xs font-mono text-brand-accent mt-1 lowercase">logan.torque@fitusion.com</p>
+            <p class="mt-4 text-brand-textSec text-sm font-light leading-relaxed">
+              HIIT specialist focused entirely on maximizing cardiovascular thresholds and dynamic power-to-weight physical adaptability.
+            </p>
+            <div class="mt-6 flex gap-2">
+              <span class="text-[10px] uppercase font-mono bg-brand-bg px-2.5 py-1 border border-brand-border text-brand-textSec rounded">NASM-PES</span>
+              <span class="text-[10px] uppercase font-mono bg-brand-bg px-2.5 py-1 border border-brand-border text-brand-textSec rounded">FST-L2</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= 8. TESTIMONIALS ================= -->
+  <section id="testimonials" class="py-24 bg-brand-card border-y border-brand-border relative z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Title -->
+      <div class="text-center mb-16 reveal">
+        <div class="inline-block bg-brand-bg border border-brand-border px-3.5 py-1.5 rounded-full mb-3">
+          <span class="text-[10px] uppercase tracking-widest font-bold text-brand-accent">Authentic Impact</span>
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight">
+          Your Success Stories, <span class="text-brand-accent">Our Inspiration</span>
+        </h2>
+        <p class="mt-4 text-brand-textSec text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          See how our physical platforms and customized personal programs have completely redefined active lifestyles across India.
+        </p>
+      </div>
+
+      <!-- 3 Testimonial Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="bg-brand-bg border border-brand-border p-8 rounded-[12px] flex flex-col justify-between group hover:border-brand-accent/60 hover:shadow-[0_0_25px_rgba(255,215,0,0.22)] transition-all duration-300 reveal">
+          <div>
+            <!-- Star Ratings with custom design -->
+            <div class="flex items-center space-x-1 text-brand-accent mb-6 text-lg">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <!-- Testimonial content -->
+            <p class="italic text-brand-textSec text-base font-light leading-relaxed relative z-10">
+              "Finding FiTusion completely restructured my body composition targets. In only 4 months of progressive barbell loading and dedicated customized macros support, I shattered my PRs and shredded fat!"
+            </p>
+          </div>
+          <div class="mt-8 pt-6 border-t border-brand-border/60 flex items-center gap-4">
+            <!-- Transformation Avatar -->
+            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-accent flex-shrink-0 lime-glow">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150" alt="Arjun Mehra Transformation" referrerpolicy="no-referrer" class="w-full h-full object-cover filter grayscale contrast-125">
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base leading-tight">Arjun Mehra</h4>
+              <span class="text-xs uppercase font-mono text-brand-accent font-semibold tracking-wider">IT Operations lead, Mumbai</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-brand-bg border border-brand-border p-8 rounded-[12px] flex flex-col justify-between group hover:border-brand-accent/60 hover:shadow-[0_0_25px_rgba(255,215,0,0.22)] transition-all duration-300 reveal">
+          <div>
+            <!-- Star Ratings with custom design -->
+            <div class="flex items-center space-x-1 text-brand-accent mb-6 text-lg">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <!-- Testimonial content -->
+            <p class="italic text-brand-textSec text-base font-light leading-relaxed relative z-10">
+              "The coaches are exceptionally analytical. The telemetry and HRV zone pacing setups allowed me to scale my high-volume CrossFit speed without hitting joint exhaustion bottlenecks. Recommended fully!"
+            </p>
+          </div>
+          <div class="mt-8 pt-6 border-t border-brand-border/60 flex items-center gap-4">
+            <!-- Transformation Avatar -->
+            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-accent flex-shrink-0 lime-glow">
+              <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&q=80&w=150" alt="Priya Sharma Transformation" referrerpolicy="no-referrer" class="w-full h-full object-cover filter grayscale contrast-125">
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base leading-tight">Priya Sharma</h4>
+              <span class="text-xs uppercase font-mono text-brand-accent font-semibold tracking-wider">Sports Athlete, New Delhi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-brand-bg border border-brand-border p-8 rounded-[12px] flex flex-col justify-between group hover:border-brand-accent/60 hover:shadow-[0_0_25px_rgba(255,215,0,0.22)] transition-all duration-300 reveal">
+          <div>
+            <!-- Star Ratings with lime design -->
+            <div class="flex items-center space-x-1 text-brand-accent mb-6 text-lg">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <!-- Testimonial content -->
+            <p class="italic text-brand-textSec text-base font-light leading-relaxed relative z-10">
+              "FiTusion's HIIT frameworks re-designed my daily cardio output level completely. The dynamic recovery zone pacing feels magnificent, and the premium B&W design architecture matches my focus perfectly."
+            </p>
+          </div>
+          <div class="mt-8 pt-6 border-t border-brand-border/60 flex items-center gap-4">
+            <!-- Transformation Avatar -->
+            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-accent flex-shrink-0 lime-glow">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=150" alt="Reyansh Kapoor Transformation" referrerpolicy="no-referrer" class="w-full h-full object-cover filter grayscale contrast-125">
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-base leading-tight">Reyansh Kapoor</h4>
+              <span class="text-xs uppercase font-mono text-brand-accent font-semibold tracking-wider">Product Designer, Bengaluru</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= 8.5 BENTO ATHLETIC GALLERY ================= -->
+  <section id="gallery" class="py-24 bg-brand-bg relative z-10 border-t border-brand-border/40">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-16 reveal">
+        <div class="inline-block bg-brand-card border border-brand-border px-3.5 py-1.5 rounded-full mb-3">
+          <span class="text-[10px] uppercase tracking-widest font-bold text-brand-accent">FiTusion Culture</span>
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight">
+          VISUALIZING <span class="text-brand-accent">RAW FOCUS</span>
+        </h2>
+        <p class="mt-4 text-brand-textSec text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          Explore the intense aesthetic symmetry of elite physical output captured in high-contrast black and white.
+        </p>
+      </div>
+
+      <!-- Bento Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px]">
+        
+        <!-- Bento item 1: Tall Double Span -->
+        <div class="lg:row-span-2 group relative border border-brand-border rounded-[12px] overflow-hidden bg-brand-card flex flex-col justify-end p-8 hover:border-brand-accent hover:shadow-[0_0_35px_rgba(255,215,0,0.25)] transition-all duration-500 reveal">
+          <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=800" alt="Symmetry of Lift" referrerpolicy="no-referrer" class="w-full h-full object-cover filter grayscale contrast-125 brightness-50 group-hover:grayscale-0 group-hover:brightness-75 group-hover:scale-105 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          </div>
+          <div class="relative z-10">
+            <span class="font-mono text-xs text-brand-accent tracking-wider uppercase">// POWER PRINCIPLE</span>
+            <h3 class="font-display text-3xl text-white uppercase mt-2 group-hover:text-brand-accent transition-colors">THE DEADLIFT MECHANIC</h3>
+            <p class="text-brand-textSec text-xs font-light mt-2 leading-relaxed">Foundational posterior chain recruitment targeting dynamic physical stabilization under heavy loads.</p>
+          </div>
+        </div>
+
+        <!-- Bento item 2: Wide Horizontal Span -->
+        <div class="lg:col-span-2 group relative border border-brand-border rounded-[12px] overflow-hidden bg-brand-card flex flex-col justify-end p-8 hover:border-brand-accent hover:shadow-[0_0_35px_rgba(255,215,0,0.25)] transition-all duration-500 reveal">
+          <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=1200" alt="High speed movement" referrerpolicy="no-referrer" class="w-full h-full object-cover filter grayscale contrast-125 brightness-50 group-hover:grayscale-0 group-hover:brightness-75 group-hover:scale-105 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          </div>
+          <div class="relative z-10">
+            <span class="font-mono text-xs text-brand-accent tracking-wider uppercase">// FLUID SUSPENSION</span>
+            <h3 class="font-display text-3xl text-white uppercase mt-2 group-hover:text-brand-accent transition-colors">KINETIC OVERLOAD STRATEGY</h3>
+            <p class="text-brand-textSec text-xs font-light mt-2 leading-relaxed">Maximizing constant muscular tension utilizing TRX mechanics to stimulate full-body coordination.</p>
+          </div>
+        </div>
+
+        <!-- Bento item 3: Standard Square -->
+        <div class="group relative border border-brand-border rounded-[12px] overflow-hidden bg-brand-card flex flex-col justify-end p-8 hover:border-brand-accent hover:shadow-[0_0_35px_rgba(255,215,0,0.25)] transition-all duration-500 reveal">
+          <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&q=80&w=800" alt="Athletic Sprinter" referrerpolicy="no-referrer" class="w-full h-full object-cover filter grayscale contrast-125 brightness-50 group-hover:grayscale-0 group-hover:brightness-75 group-hover:scale-105 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          </div>
+          <div class="relative z-10">
+            <span class="font-mono text-xs text-brand-accent tracking-wider uppercase">// VELOCITY</span>
+            <h3 class="font-display text-3xl text-white uppercase mt-2 group-hover:text-brand-accent transition-colors">SPRINT CAPACITY</h3>
+            <p class="text-brand-textSec text-xs font-light mt-2 leading-relaxed">Elite anaerobic conditioning targeting maximum metabolic output thresholds.</p>
+          </div>
+        </div>
+
+        <!-- Bento item 4: Standard Square -->
+        <div class="group relative border border-brand-border rounded-[12px] overflow-hidden bg-brand-card flex flex-col justify-end p-8 hover:border-brand-accent hover:shadow-[0_0_35px_rgba(255,215,0,0.25)] transition-all duration-500 reveal">
+          <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800" alt="Heavy Battles" referrerpolicy="no-referrer" class="w-full h-full object-cover filter grayscale contrast-125 brightness-50 group-hover:grayscale-0 group-hover:brightness-75 group-hover:scale-105 transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          </div>
+          <div class="relative z-10">
+            <span class="font-mono text-xs text-brand-accent tracking-wider uppercase">// ENDURANCE</span>
+            <h3 class="font-display text-3xl text-white uppercase mt-2 group-hover:text-brand-accent transition-colors">METCON BATTLES</h3>
+            <p class="text-brand-textSec text-xs font-light mt-2 leading-relaxed">Improve shoulder stability metrics while burning energy via heavy battles ropes splits.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= 9. CTA SECTION ================= -->
+  <section id="contact" class="bg-brand-accent text-black py-24 relative overflow-hidden z-10">
+    <div class="absolute inset-0 bg-grid-overlay opacity-5 z-0"></div>
+    
+    <div class="max-w-4xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-12">
+      
+      <!-- Left side text content -->
+      <div class="lg:w-1/2 text-left">
+        <div class="inline-block bg-black text-brand-accent px-3.5 py-1.5 rounded-full text-xs font-mono mb-4 uppercase tracking-wider">
+          // IMMEDIATE WHATSAPP ONBOARDING
+        </div>
+        <!-- Headline -->
+        <h2 class="font-display text-5xl sm:text-7xl uppercase tracking-tight leading-none text-black">
+          SECURE YOUR<br> MEMBERSHIP
+        </h2>
+        
+        <p class="mt-6 text-black/90 text-sm sm:text-base max-w-lg font-medium leading-relaxed">
+          Join India's premiere private fitness platform. Simply fill out this quick registration form, and you will be immediately redirected to our head coordinator on WhatsApp (<span class="font-bold underline">7000818065</span>) to schedule your elite orientation session.
+        </p>
+
+        <div class="mt-8 space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-black text-brand-accent flex items-center justify-center font-bold text-sm">1</span>
+            <span class="font-sans text-xs font-semibold text-black/85 uppercase tracking-wide">CHOOSE TIER & FILL BIOMETRIC NAME</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-black text-brand-accent flex items-center justify-center font-bold text-sm">2</span>
+            <span class="font-sans text-xs font-semibold text-black/85 uppercase tracking-wide">DOCK DIRECTLY TO WHATSAPP DESK</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-black text-brand-accent flex items-center justify-center font-bold text-sm">3</span>
+            <span class="font-sans text-xs font-semibold text-black/85 uppercase tracking-wide">VISIT FLOOR & LAUNCH TRANSFORMATION</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side form block -->
+      <div class="w-full lg:w-1/2">
+        <div id="form-card" class="bg-[#0b0b0b] text-white p-8 rounded-[16px] border border-neutral-900 shadow-2xl transition-all duration-500 relative">
+          
+          <div class="mb-6">
+            <span class="text-brand-accent uppercase text-[10px] tracking-widest font-mono">// official entry form</span>
+            <h3 class="font-display text-2xl uppercase mt-1">FITUSION BOOKING DESK</h3>
+          </div>
+
+          <!-- Feedback Banner Message -->
+          <div id="form-feedback" class="hidden w-full p-4 mb-6 rounded text-sm font-semibold tracking-wide text-center"></div>
+
+          <!-- Action Form -->
+          <form id="optin-form" class="space-y-5 text-left">
+            <div>
+              <label class="block text-[11px] font-mono text-brand-textSec uppercase tracking-wider mb-2">Your Full Name *</label>
+              <input 
+                type="text" 
+                id="form-name"
+                placeholder="e.g. Tanmay Rajput" 
+                required
+                class="w-full bg-brand-bg text-white px-4 py-3.5 border border-brand-border rounded-[6px] text-sm focus:outline-none focus:border-brand-accent font-sans font-medium placeholder:text-neutral-600"
+              />
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-mono text-brand-textSec uppercase tracking-wider mb-2">WhatsApp Mobile Number *</label>
+              <input 
+                type="tel" 
+                id="form-phone"
+                placeholder="e.g. +91 70008 18065 or 10-digit phone" 
+                required
+                class="w-full bg-brand-bg text-white px-4 py-3.5 border border-brand-border rounded-[6px] text-sm focus:outline-none focus:border-brand-accent font-sans font-medium placeholder:text-neutral-600"
+              />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[11px] font-mono text-brand-textSec uppercase tracking-wider mb-2">Membership *</label>
+                <select 
+                  id="form-plan"
+                  required
+                  class="w-full bg-brand-bg text-white px-4 py-3 border border-brand-border rounded-[6px] text-sm focus:outline-none focus:border-brand-accent font-sans font-medium cursor-pointer"
+                >
+                  <option value="0">Club Pass — ₹2,499/Mo</option>
+                  <option value="1" selected>Coach Pro — ₹4,499/Mo</option>
+                  <option value="2">Elite Athlete — ₹7,999/Mo</option>
+                  <option value="3">General Guest Pass Invite</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-mono text-brand-textSec uppercase tracking-wider mb-2">Program (Optional)</label>
+                <select 
+                  id="form-program"
+                  class="w-full bg-brand-bg text-white px-4 py-3 border border-brand-border rounded-[6px] text-sm focus:outline-none focus:border-brand-accent font-sans font-medium cursor-pointer"
+                >
+                  <option value="0" selected>Gym Floor Access Only</option>
+                  <option value="1">Barbell Basics Compound</option>
+                  <option value="2">Kettlebell Masterclass</option>
+                  <option value="3">Cardio Power Boost (HIIT)</option>
+                  <option value="4">Hypertrophy Muscle-Build</option>
+                  <option value="5">Ropes & TRX Conditioning</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-mono text-brand-textSec uppercase tracking-wider mb-2">Goals & Notes</label>
+              <textarea 
+                id="form-note"
+                rows="2"
+                placeholder="e.g., Target: fat loss, injuries, training history" 
+                class="w-full bg-brand-bg text-white px-4 py-3 border border-brand-border rounded-[6px] text-sm focus:outline-none focus:border-brand-accent font-sans font-medium placeholder:text-neutral-600 resize-none"
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit" 
+              class="w-full bg-brand-accent text-black font-extrabold uppercase tracking-widest text-xs py-4.5 rounded-[6px] hover:bg-white hover:text-black hover:scale-[1.01] hover:shadow-[0_0_25px_rgba(255,215,0,0.5)] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <!-- WhatsApp Icon -->
+              <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
+                <path d="M12.012 2c-5.506 0-9.985 4.479-9.985 9.985 0 1.761.459 3.464 1.332 4.978L2 22l5.176-1.357c1.472.802 3.125 1.227 4.825 1.227 5.517 0 9.996-4.479 9.996-9.985s-4.479-9.985-9.985-9.985zm0 18.293c-1.493 0-2.961-.401-4.243-1.158l-.304-.18-3.15.825.84-3.072-.197-.314a8.238 8.238 0 01-1.266-4.409c0-4.568 3.718-8.286 8.286-8.286s8.286 3.718 8.286 8.286-3.718 8.286-8.286 8.286zm4.542-6.19c-.248-.124-1.472-.727-1.7-.81-.228-.083-.393-.124-.559.124-.166.248-.642.81-.787.975-.145.166-.29.186-.538.062a6.786 6.786 0 01-2.003-1.236 7.481 7.481 0 01-1.385-1.724c-.145-.248-.016-.381.11-.505.111-.112.247-.29.37-.435.125-.145.166-.248.249-.415.083-.166.042-.311-.02-.435s-.559-1.348-.767-1.847c-.202-.487-.406-.421-.559-.429h-.477c-.166 0-.435.062-.663.311s-.87.851-.87 2.075c0 1.224.891 2.407.994 2.553.104.145 1.753 2.677 4.247 3.75 2.493 1.072 2.493.715 2.941.674.448-.041 1.452-.593 1.657-1.162.207-.57.207-1.057.145-1.162-.062-.1-.228-.184-.476-.309z" />
+              </svg>
+              SUBMIT ON WHATSAPP &rarr;
+            </button>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= 10. FOOTER ================= -->
+  <footer class="bg-brand-bg py-16 border-t border-brand-border relative z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="flex flex-col md:flex-row justify-between items-center gap-10">
+        
+        <!-- Logo -->
+        <a href="#home" class="flex items-center space-x-2">
+          <span class="text-3xl font-display uppercase tracking-widest text-white">
+            <span class="text-[#c8f000]">Fi</span>Tusion
+          </span>
+        </a>
+
+        <!-- Footer Mid-Links -->
+        <div class="flex flex-wrap justify-center gap-8 text-sm text-brand-textSec">
+          <a href="#features" class="hover:text-white transition-colors">About Us</a>
+          <a href="#programs" class="hover:text-white transition-colors">Programs</a>
+          <a href="#trainers" class="hover:text-white transition-colors">Trainers</a>
+          <a href="#testimonials" class="hover:text-white transition-colors">Testimonials</a>
+          <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+          <span class="hover:text-white cursor-pointer transition-colors" onclick="alert('Privacy Policy updated as of June 2026')">Privacy</span>
+          <span class="hover:text-white cursor-pointer transition-colors" onclick="alert('Platform Terms and Conditions apply.')">Terms</span>
+        </div>
+
+        <!-- Social Icons / Pure CSS representation -->
+        <div class="flex items-center space-x-5">
+          <!-- Facebook icon -->
+          <a href="https://www.facebook.com/fitusion" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-brand-border flex items-center justify-center text-brand-textSec hover:text-brand-accent hover:border-brand-accent transition-all duration-300" aria-label="Facebook">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+          </a>
+          <!-- Instagram icon -->
+          <a href="https://www.instagram.com/fitusion" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-brand-border flex items-center justify-center text-brand-textSec hover:text-brand-accent hover:border-brand-accent transition-all duration-300" aria-label="Instagram">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <!-- Twitter/X icon -->
+          <a href="https://twitter.com/fitusion" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-brand-border flex items-center justify-center text-brand-textSec hover:text-brand-accent hover:border-brand-accent transition-all duration-300" aria-label="X (Twitter)">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-brand-border/40 text-center flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-brand-textSec">
+          &copy; 2026 FiTusion. All Rights Reserved. Crafted with high performance premium fitness technology standards. All programs subject to safety clearances.
+        </p>
+        <p class="text-xs text-brand-textSec">
+          India's Elite Personal Athletic Conditioning Systems.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // 1. Sticky Navigation Scroll Interaction
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-brand-bg/85', 'backdrop-blur-md', 'border-brand-border');
+        navbar.classList.remove('border-transparent');
+      } else {
+        navbar.classList.remove('bg-brand-bg/85', 'backdrop-blur-md', 'border-brand-border');
+        navbar.classList.add('border-transparent');
+      }
+    });
+
+    // 2. Mobile Responsive Hamburger Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        hamburgerIcon.classList.remove('block');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+        closeIcon.classList.add('block');
+      } else {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        hamburgerIcon.classList.add('block');
+        closeIcon.classList.remove('block');
+        closeIcon.classList.add('hidden');
+      }
+    });
+
+    // Close mobile menu when links are clicked
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        hamburgerIcon.classList.add('block');
+        closeIcon.classList.remove('block');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // 3. Scroll Reveal Animation using Intersection Observer
+    const revealElements = document.querySelectorAll('.reveal');
+    const elementObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          elementObserver.unobserve(entry.target); // Trigger only once for performance
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1,
+      rootMargin: "0px"
+    });
+
+    revealElements.forEach(element => {
+      elementObserver.observe(element);
+    });
+
+    // Trigger on load for instantly-visible objects
+    window.addEventListener('DOMContentLoaded', () => {
+      const firstSectionElements = document.querySelector('#home').querySelectorAll('.reveal');
+      firstSectionElements.forEach(el => el.classList.add('active'));
+    });
+
+    // 4. Form Submission WhatsApp Integration & Plan Selection Script
+    const optInForm = document.getElementById('optin-form');
+    const nameInput = document.getElementById('form-name');
+    const phoneInput = document.getElementById('form-phone');
+    const planSelect = document.getElementById('form-plan');
+    const programSelect = document.getElementById('form-program');
+    const noteInput = document.getElementById('form-note');
+    const formFeedback = document.getElementById('form-feedback');
+
+    optInForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const name = nameInput.value.trim();
+      const phone = phoneInput.value.trim();
+      const selectedPlan = planSelect.options[planSelect.selectedIndex].text;
+      const selectedProgram = programSelect.options[programSelect.selectedIndex].text;
+      const note = noteInput.value.trim() || 'No additional notes provided.';
+
+      if (!name || !phone) {
+        formFeedback.innerText = "Please fill in all required fields.";
+        formFeedback.className = "w-full p-4 mb-6 rounded bg-red-600/30 text-white border border-red-500 text-sm font-semibold tracking-wide text-center";
+        formFeedback.classList.remove('hidden');
+        return;
+      }
+
+      const submitBtn = optInForm.querySelector('button[type="submit"]');
+      const originalBtnContent = submitBtn.innerHTML;
+
+      // Enter elegant premium loading state
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-80', 'cursor-wait');
+      submitBtn.innerHTML = `
+        <div class="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
+        PREPARING SECURE LINK...
+      `;
+
+      // Construct WhatsApp message
+      const message = `Hi FiTusion Gym, I would like to lock in a slot!\n\n` +
+                      `👤 *Name:* ${name}\n` +
+                      `📱 *Phone/WhatsApp:* ${phone}\n` +
+                      `💳 *Membership Selected:* ${selectedPlan}\n` +
+                      `🏋️ *Program Area:* ${selectedProgram}\n` +
+                      `📝 *Goals / Notes:* ${note}\n\n` +
+                      `Please register me as an active applicant!`;
+
+      // Target WhatsApp URL string (7000818065)
+      const whatsappUrl = `https://wa.me/917000818065?text=${encodeURIComponent(message)}`;
+
+      // Simulate a sophisticated 1.2-second secure handoff before launching tab & confetti
+      setTimeout(() => {
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, '_blank');
+
+        // Trigger the premium gold confetti burst
+        triggerGoldConfetti();
+
+        // Show instant feedback on-screen with manual fallback button
+        formFeedback.innerHTML = `
+          <div class="flex flex-col items-center justify-center gap-3 py-1">
+            <p class="text-brand-accent font-semibold text-base">WhatsApp Desk Opened in New Tab!</p>
+            <p class="text-xs text-brand-textSec">Check your browser tabs. If the window did not open or was blocked, please click the button below to join:</p>
+            <a href="${whatsappUrl}" target="_blank" class="mt-2 inline-flex bg-brand-accent text-black font-extrabold uppercase tracking-wider text-xs px-6 py-3 rounded hover:bg-white hover:text-black hover:shadow-[0_0_20px_rgba(255,215,0,0.4)] transition-all">
+              Open WhatsApp Manually
+            </a>
+          </div>
+        `;
+        formFeedback.className = "w-full p-6 mb-6 rounded bg-neutral-900 text-brand-textSec border border-brand-accent/30 text-sm font-medium tracking-wide text-center";
+        formFeedback.classList.remove('hidden');
+
+        // Reset submit button state for potential future changes or adjustments
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-80', 'cursor-wait');
+        submitBtn.innerHTML = originalBtnContent;
+      }, 1200);
+    });
+
+    // Helper function called by Monthly Membership choosing buttons
+    function selectMembershipPlan(planIndex, planLabel) {
+      if (planSelect) {
+        planSelect.selectedIndex = planIndex;
+        
+        // Scroll smoothly to contact form section
+        const contactSec = document.getElementById('contact');
+        if (contactSec) {
+          contactSec.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Flash a beautiful golden border glow on the registration card to guide the user
+        const formCard = document.getElementById('form-card');
+        if (formCard) {
+          formCard.classList.remove('border-neutral-900');
+          formCard.classList.add('border-brand-accent', 'scale-[1.015]', 'shadow-[0_0_40px_rgba(255,215,0,0.5)]');
+          setTimeout(() => {
+            formCard.classList.remove('scale-[1.015]');
+          }, 450);
+          setTimeout(() => {
+            formCard.classList.remove('shadow-[0_0_40px_rgba(255,215,0,0.5)]');
+            formCard.classList.remove('border-brand-accent');
+            formCard.classList.add('border-neutral-900');
+          }, 3500);
+        }
+      }
+    }
+
+    // Premium gold confetti particle system
+    function triggerGoldConfetti() {
+      const canvas = document.getElementById('gold-confetti-canvas') || (() => {
+        const c = document.createElement('canvas');
+        c.id = 'gold-confetti-canvas';
+        c.className = 'fixed inset-0 pointer-events-none z-50';
+        document.body.appendChild(c);
+        return c;
+      })();
+
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      const resizeCanvas = () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      };
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+
+      const goldColors = [
+        '#ffd700', // Vibrant pure gold
+        '#e6b800', // Deep gold
+        '#b59228', // Burnished gold
+        '#fcf3cf', // Soft champagne gold
+        '#daa520', // Classic Goldenrod
+        '#fff6d1'  // Glimmering pale gold
+      ];
+
+      const particles = [];
+      const count = 120; // Perfect dense but lightweight burst
+
+      // Determine the coordinate of the submit button to launch from
+      const submitBtn = document.querySelector('button[type="submit"]');
+      let startX = window.innerWidth / 2;
+      let startY = window.innerHeight * 0.75;
+
+      if (submitBtn) {
+        const rect = submitBtn.getBoundingClientRect();
+        startX = rect.left + rect.width / 2;
+        startY = rect.top + rect.height / 2;
+      }
+
+      for (let i = 0; i < count; i++) {
+        // High variation launch vectors to create a fountain + umbrella spray effect
+        const angle = Math.PI * 1.5 + (Math.random() - 0.5) * Math.PI * 0.8; // mostly upward spray
+        const speed = Math.random() * 16 + 6;
+
+        particles.push({
+          x: startX,
+          y: startY,
+          size: Math.random() * 8 + 4,
+          color: goldColors[Math.floor(Math.random() * goldColors.length)],
+          speedX: Math.cos(angle) * speed,
+          speedY: Math.sin(angle) * speed,
+          gravity: 0.32,
+          friction: 0.96, // air resistance
+          rotation: Math.random() * 360,
+          rotationSpeed: (Math.random() - 0.5) * 12,
+          opacity: 1,
+          fadeSpeed: Math.random() * 0.008 + 0.005,
+          shape: Math.random() > 0.45 ? 'rect' : (Math.random() > 0.5 ? 'circle' : 'star')
+        });
+      }
+
+      let animId;
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        let active = false;
+        particles.forEach(p => {
+          if (p.opacity > 0) {
+            active = true;
+            p.speedX *= p.friction;
+            p.speedY += p.gravity;
+            p.x += p.speedX;
+            p.y += p.speedY;
+            p.rotation += p.rotationSpeed;
+            p.opacity -= p.fadeSpeed;
+
+            ctx.save();
+            ctx.globalAlpha = p.opacity;
+            ctx.translate(p.x, p.y);
+            ctx.rotate(p.rotation * Math.PI / 180);
+            ctx.fillStyle = p.color;
+
+            // Extra premium glow for gold theme
+            ctx.shadowColor = '#ffd700';
+            ctx.shadowBlur = p.opacity > 0.4 ? 8 : 0;
+
+            if (p.shape === 'circle') {
+              ctx.beginPath();
+              ctx.arc(0, 0, p.size / 2, 0, Math.PI * 2);
+              ctx.fill();
+            } else if (p.shape === 'star') {
+              // Draw a lovely 4-point sparkle star
+              ctx.beginPath();
+              ctx.moveTo(0, -p.size);
+              ctx.quadraticCurveTo(0, 0, p.size, 0);
+              ctx.quadraticCurveTo(0, 0, 0, p.size);
+              ctx.quadraticCurveTo(0, 0, -p.size, 0);
+              ctx.quadraticCurveTo(0, 0, 0, -p.size);
+              ctx.fill();
+            } else {
+              // Classic rectangular confetti flake
+              ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size / 2);
+            }
+
+            ctx.restore();
+          }
+        });
+
+        if (active) {
+          animId = requestAnimationFrame(animate);
+        } else {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          window.removeEventListener('resize', resizeCanvas);
+        }
+      }
+
+      animate();
+    }
+  </script>
+
+</body>
+</html>
+
+<!--
+================================================================================
+SITEMAP.XML EMBEDDED STRUCTURE (SEO SUPPORT)
+================================================================================
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.fitusion.com/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+-->
+
+<!--
+================================================================================
+ROBOTS.TXT EMBEDDED CONFIGURATION
+================================================================================
+User-agent: *
+Allow: /
+Sitemap: https://www.fitusion.com/sitemap.xml
+-->
